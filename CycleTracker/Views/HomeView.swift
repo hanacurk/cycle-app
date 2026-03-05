@@ -36,6 +36,7 @@ struct PhaseContent: Codable {
     let quotes: [String]
     let dos: [String]
     let donts: [String]
+    let foods: [FoodItem]
     let recipes: [RecipeItem]
 }
 
@@ -46,6 +47,11 @@ struct RecipeItem: Codable, Identifiable {
     let description: String
 }
 
+struct FoodItem: Codable, Identifiable {
+    var id: String { name }
+    let name: String
+    let emoji: String
+}
 // MARK: - Content Loader
 
 final class PhaseContentLoader {
@@ -119,9 +125,9 @@ struct HomeView: View {
                     VStack(spacing: 14) {
                         headerCard
                         phaseSelector
-                        quoteCard
                         doDontRow
                         seedsCard
+                        foodsCard
                         recipesSection
                     }
                     .padding(.horizontal, 16)
@@ -193,6 +199,40 @@ struct HomeView: View {
             .foregroundStyle(isSelected ? .white : .primary)
         }
         .buttonStyle(.plain)
+    }
+    
+    // MARK: - Foods
+    
+    private var foodsCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Label("Foods to enjoy", systemImage: "fork.knife")
+                .font(.caption.bold())
+                .textCase(.uppercase)
+                .kerning(1.1)
+                .foregroundStyle(.secondary)
+
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 8) {
+                ForEach(content.foods) { food in
+                    VStack(spacing: 5) {
+                        Text(food.emoji)
+                            .font(.system(size: 26))
+                            .frame(width: 50, height: 50)
+                            .background(
+                                RoundedRectangle(cornerRadius: 14)
+                                    .fill(displayedPhase.ringColor.opacity(0.15))
+                            )
+                        Text(food.name)
+                            .font(.system(size: 11, weight: .medium, design: .rounded))
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(2)
+                    }
+                }
+            }
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(RoundedRectangle(cornerRadius: 20).fill(.white.opacity(0.62)))
     }
 
     // MARK: - Quote
@@ -331,7 +371,7 @@ struct HomeView: View {
 
     private var recipesSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Recipes to enjoy")
+            Text("Recipe ideas")
                 .font(.subheadline.bold())
                 .textCase(.uppercase)
                 .kerning(1.2)

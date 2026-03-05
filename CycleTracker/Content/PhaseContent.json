@@ -144,6 +144,56 @@
         "emoji": "🫖",
         "description": "Soft oat cookies with crystallised ginger and dark chocolate chips"
       }
+    ],
+    "foods": [
+      {
+        "name": "Spinach",
+        "emoji": "🥬"
+      },
+      {
+        "name": "Lentils",
+        "emoji": "🫘"
+      },
+      {
+        "name": "Dark chocolate",
+        "emoji": "🍫"
+      },
+      {
+        "name": "Ginger",
+        "emoji": "🫚"
+      },
+      {
+        "name": "Beetroot",
+        "emoji": "🫀"
+      },
+      {
+        "name": "Pumpkin seeds",
+        "emoji": "🌰"
+      },
+      {
+        "name": "Sweet potato",
+        "emoji": "🍠"
+      },
+      {
+        "name": "Chamomile tea",
+        "emoji": "🫖"
+      },
+      {
+        "name": "Bananas",
+        "emoji": "🍌"
+      },
+      {
+        "name": "Tofu",
+        "emoji": "🧊"
+      },
+      {
+        "name": "Turmeric",
+        "emoji": "🌿"
+      },
+      {
+        "name": "Kidney beans",
+        "emoji": "🫘"
+      }
     ]
   },
   "follicular": {
@@ -290,6 +340,56 @@
         "name": "Green Detox Juice",
         "emoji": "🥤",
         "description": "Cucumber, celery, apple, ginger and spinach cold-pressed juice"
+      }
+    ],
+    "foods": [
+      {
+        "name": "Avocado",
+        "emoji": "🥑"
+      },
+      {
+        "name": "Broccoli",
+        "emoji": "🥦"
+      },
+      {
+        "name": "Eggs",
+        "emoji": "🥚"
+      },
+      {
+        "name": "Berries",
+        "emoji": "🫐"
+      },
+      {
+        "name": "Flaxseeds",
+        "emoji": "🌾"
+      },
+      {
+        "name": "Fermented foods",
+        "emoji": "🥒"
+      },
+      {
+        "name": "Green tea",
+        "emoji": "🍵"
+      },
+      {
+        "name": "Quinoa",
+        "emoji": "🌿"
+      },
+      {
+        "name": "Almonds",
+        "emoji": "🌰"
+      },
+      {
+        "name": "Citrus fruits",
+        "emoji": "🍊"
+      },
+      {
+        "name": "Leafy greens",
+        "emoji": "🥬"
+      },
+      {
+        "name": "Pumpkin",
+        "emoji": "🎃"
       }
     ]
   },
@@ -438,6 +538,56 @@
         "emoji": "🌈",
         "description": "Roasted veggies, grains, greens and hummus with tahini drizzle"
       }
+    ],
+    "foods": [
+      {
+        "name": "Strawberries",
+        "emoji": "🍓"
+      },
+      {
+        "name": "Watermelon",
+        "emoji": "🍉"
+      },
+      {
+        "name": "Asparagus",
+        "emoji": "🌿"
+      },
+      {
+        "name": "Sunflower seeds",
+        "emoji": "🌻"
+      },
+      {
+        "name": "Sesame seeds",
+        "emoji": "🌾"
+      },
+      {
+        "name": "Tomatoes",
+        "emoji": "🍅"
+      },
+      {
+        "name": "Figs",
+        "emoji": "🫐"
+      },
+      {
+        "name": "Chickpeas",
+        "emoji": "🫘"
+      },
+      {
+        "name": "Leafy greens",
+        "emoji": "🥬"
+      },
+      {
+        "name": "Mango",
+        "emoji": "🥭"
+      },
+      {
+        "name": "Coconut water",
+        "emoji": "🥥"
+      },
+      {
+        "name": "Bell peppers",
+        "emoji": "🫑"
+      }
     ]
   },
   "luteal": {
@@ -584,6 +734,56 @@
         "name": "Dark Chocolate Mousse",
         "emoji": "🍮",
         "description": "Light aquafaba chocolate mousse with raspberries and mint"
+      }
+    ],
+    "foods": [
+      {
+        "name": "Spinach",
+        "emoji": "🥬"
+      },
+      {
+        "name": "Dark chocolate",
+        "emoji": "🍫"
+      },
+      {
+        "name": "Sweet potato",
+        "emoji": "🍠"
+      },
+      {
+        "name": "Kimchi",
+        "emoji": "🥢"
+      },
+      {
+        "name": "Pumpkin seeds",
+        "emoji": "🌰"
+      },
+      {
+        "name": "Walnuts",
+        "emoji": "🪨"
+      },
+      {
+        "name": "Oats",
+        "emoji": "🌾"
+      },
+      {
+        "name": "Chamomile tea",
+        "emoji": "🫖"
+      },
+      {
+        "name": "Brown rice",
+        "emoji": "🍚"
+      },
+      {
+        "name": "Bananas",
+        "emoji": "🍌"
+      },
+      {
+        "name": "Lentils",
+        "emoji": "🫘"
+      },
+      {
+        "name": "Chickpeas",
+        "emoji": "🫘"
       }
     ]
   }
