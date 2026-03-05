@@ -8,61 +8,75 @@ struct CalendarView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 16) {
-                // Month navigation
-                HStack {
-                    Button { viewModel.previousMonth() } label: {
-                        Image(systemName: "chevron.left")
-                            .font(.title3)
-                    }
-                    Spacer()
-                    Text(viewModel.monthYearString)
-                        .font(.title2.bold())
-                    Spacer()
-                    Button { viewModel.nextMonth() } label: {
-                        Image(systemName: "chevron.right")
-                            .font(.title3)
-                    }
-                }
-                .padding(.horizontal)
+            ZStack {
+                backgroundPhase.backgroundTint.opacity(0.55)
+                    .ignoresSafeArea()
 
-                // Calendar grid
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 8) {
-                    // Weekday headers
-                    ForEach(viewModel.weekdaySymbols, id: \.self) { symbol in
-                        Text(symbol)
-                            .font(.caption.bold())
-                            .foregroundStyle(.secondary)
-                    }
-
-                    // Day cells
-                    ForEach(viewModel.calendarDays) { day in
-                        if let date = day.date {
-                            let phase = viewModel.phase(for: date, cycles: cycles)
-                            DayCell(
-                                dayNumber: day.dayNumber,
-                                phase: phase,
-                                isToday: Calendar.current.isDateInToday(date),
-                                isSelected: selectedDate.map { Calendar.current.isDate(date, inSameDayAs: $0) } ?? false
-                            )
-                            .onTapGesture { selectedDate = date }
-                        } else {
-                            Text("")
-                                .frame(height: 36)
+                VStack(spacing: 16) {
+                    // Month navigation
+                    HStack {
+                        Button { viewModel.previousMonth() } label: {
+                            Image(systemName: "chevron.left")
+                                .font(.title3.bold())
+                                .frame(width: 34, height: 34)
+                                .background(Circle().fill(.white.opacity(0.6)))
+                        }
+                        Spacer()
+                        Text(viewModel.monthYearString)
+                            .font(.title2.bold())
+                        Spacer()
+                        Button { viewModel.nextMonth() } label: {
+                            Image(systemName: "chevron.right")
+                                .font(.title3.bold())
+                                .frame(width: 34, height: 34)
+                                .background(Circle().fill(.white.opacity(0.6)))
                         }
                     }
+                    .padding(.horizontal)
+
+                    // Calendar grid
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 8) {
+                        // Weekday headers
+                        ForEach(viewModel.weekdaySymbols, id: \.self) { symbol in
+                            Text(symbol)
+                                .font(.caption.bold())
+                                .foregroundStyle(.secondary)
+                        }
+
+                        // Day cells
+                        ForEach(viewModel.calendarDays) { day in
+                            if let date = day.date {
+                                let phase = viewModel.phase(for: date, cycles: cycles)
+                                DayCell(
+                                    dayNumber: day.dayNumber,
+                                    phase: phase,
+                                    isToday: Calendar.current.isDateInToday(date),
+                                    isSelected: selectedDate.map { Calendar.current.isDate(date, inSameDayAs: $0) } ?? false
+                                )
+                                .onTapGesture { selectedDate = date }
+                            } else {
+                                Text("")
+                                    .frame(height: 36)
+                            }
+                        }
+                    }
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.white.opacity(0.55))
+                    )
+                    .padding(.horizontal)
+
+                    // Selected date detail
+                    if let sel = selectedDate {
+                        selectedDateDetail(for: sel)
+                    }
+
+                    // Phase legend
+                    phaseLegend
+
+                    Spacer()
                 }
-                .padding(.horizontal)
-
-                // Selected date detail
-                if let sel = selectedDate {
-                    selectedDateDetail(for: sel)
-                }
-
-                // Phase legend
-                phaseLegend
-
-                Spacer()
             }
             .navigationTitle("Calendar")
         }
@@ -85,7 +99,7 @@ struct CalendarView: View {
                 .foregroundStyle(.secondary)
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 12).fill(.ultraThinMaterial))
+        .background(RoundedRectangle(cornerRadius: 12).fill(.white.opacity(0.58)))
         .padding(.horizontal)
     }
 
@@ -109,8 +123,12 @@ struct CalendarView: View {
             }
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
+        .background(RoundedRectangle(cornerRadius: 16).fill(.white.opacity(0.58)))
         .padding(.horizontal)
+    }
+
+    private var backgroundPhase: CyclePhase {
+        CycleCalculator.phase(for: Date(), cycles: cycles) ?? .follicular
     }
 }
 
@@ -124,7 +142,7 @@ struct DayCell: View {
 
     private var strokeColor: Color {
         if isSelected { return .primary }
-        if isToday { return .pink }
+        if isToday { return phase?.color ?? .primary }
         return .clear
     }
 

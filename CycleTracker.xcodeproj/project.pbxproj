@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33B701472F59886D00DADCF5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B701462F59886D00DADCF5 /* HomeView.swift */; };
 		AA00000000000000000101AA /* CycleTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000100AA /* CycleTrackerApp.swift */; };
 		AA00000000000000000111AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000110AA /* ContentView.swift */; };
-		AA00000000000000000121AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000120AA /* HomeView.swift */; };
+		AA00000000000000000121AA /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000120AA /* CircleView.swift */; };
 		AA00000000000000000131AA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000130AA /* CalendarView.swift */; };
 		AA00000000000000000141AA /* LogSymptomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000140AA /* LogSymptomView.swift */; };
 		AA00000000000000000151AA /* CycleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000150AA /* CycleHistoryView.swift */; };
@@ -23,10 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33B701462F59886D00DADCF5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AA00000000000000000011AA /* CycleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA00000000000000000100AA /* CycleTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleTrackerApp.swift; sourceTree = "<group>"; };
 		AA00000000000000000110AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AA00000000000000000120AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA00000000000000000120AA /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		AA00000000000000000130AA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		AA00000000000000000140AA /* LogSymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSymptomView.swift; sourceTree = "<group>"; };
 		AA00000000000000000150AA /* CycleHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleHistoryView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,10 @@
 		AA000000000000000001D0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA000000000000000001E0AA /* CycleTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CycleTracker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		33B701412F59861200DADCF5 /* Content */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Content; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA00000000000000000021AA /* Frameworks */ = {
@@ -71,6 +77,7 @@
 		AA00000000000000000004AA /* CycleTracker */ = {
 			isa = PBXGroup;
 			children = (
+				33B701412F59861200DADCF5 /* Content */,
 				AA00000000000000000100AA /* CycleTrackerApp.swift */,
 				AA00000000000000000005AA /* Models */,
 				AA00000000000000000006AA /* Views */,
@@ -96,8 +103,9 @@
 		AA00000000000000000006AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33B701462F59886D00DADCF5 /* HomeView.swift */,
 				AA00000000000000000110AA /* ContentView.swift */,
-				AA00000000000000000120AA /* HomeView.swift */,
+				AA00000000000000000120AA /* CircleView.swift */,
 				AA00000000000000000130AA /* CalendarView.swift */,
 				AA00000000000000000140AA /* LogSymptomView.swift */,
 				AA00000000000000000150AA /* CycleHistoryView.swift */,
@@ -136,6 +144,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				33B701412F59861200DADCF5 /* Content */,
 			);
 			name = CycleTracker;
 			productName = CycleTracker;
@@ -192,8 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA00000000000000000101AA /* CycleTrackerApp.swift in Sources */,
+				33B701472F59886D00DADCF5 /* HomeView.swift in Sources */,
 				AA00000000000000000111AA /* ContentView.swift in Sources */,
-				AA00000000000000000121AA /* HomeView.swift in Sources */,
+				AA00000000000000000121AA /* CircleView.swift in Sources */,
 				AA00000000000000000131AA /* CalendarView.swift in Sources */,
 				AA00000000000000000141AA /* LogSymptomView.swift in Sources */,
 				AA00000000000000000151AA /* CycleHistoryView.swift in Sources */,
