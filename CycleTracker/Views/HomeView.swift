@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SwiftData
+import SwiftUI
+import SwiftData
 
 // MARK: - Models
 
@@ -120,7 +122,6 @@ struct HomeView: View {
                         quoteCard
                         doDontRow
                         seedsCard
-                        blobChefCard
                         recipesSection
                     }
                     .padding(.horizontal, 16)
@@ -156,31 +157,42 @@ struct HomeView: View {
     // MARK: - Phase selector
 
     private var phaseSelector: some View {
-        HStack(spacing: 8) {
-            ForEach(CyclePhase.allCases) { phase in
-                let isSelected = phase == displayedPhase
-                Button {
-                    withAnimation(.spring(response: 0.3)) { selectedPhase = phase }
-                } label: {
-                    HStack(spacing: 5) {
-                        Circle()
-                            .fill(phase.ringColor)
-                            .frame(width: 6, height: 6)
-                        Text(phase.displayName)
-                            .font(.caption.bold())
-                    }
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 8)
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        Capsule()
-                            .fill(isSelected ? Color(hex: "#1A1A2E") : Color(hex: "#1A1A2E").opacity(0.08))
-                    )
-                    .foregroundStyle(isSelected ? .white : .primary)
+        let phases = CyclePhase.allCases
+        return VStack(spacing: 8) {
+            HStack(spacing: 8) {
+                ForEach(phases.prefix(2)) { phase in
+                    phasePill(phase)
                 }
-                .buttonStyle(.plain)
+            }
+            HStack(spacing: 8) {
+                ForEach(phases.suffix(2)) { phase in
+                    phasePill(phase)
+                }
             }
         }
+    }
+
+    private func phasePill(_ phase: CyclePhase) -> some View {
+        let isSelected = phase == displayedPhase
+        return Button {
+            withAnimation(.spring(response: 0.3)) { selectedPhase = phase }
+        } label: {
+            HStack(spacing: 6) {
+                Circle()
+                    .fill(phase.accentColor)
+                    .frame(width: 7, height: 7)
+                Text(phase.displayName)
+                    .font(.caption.bold())
+            }
+            .padding(.vertical, 10)
+            .frame(maxWidth: .infinity)
+            .background(
+                Capsule()
+                    .fill(isSelected ? Color(hex: "#1A1A2E") : Color(hex: "#1A1A2E").opacity(0.08))
+            )
+            .foregroundStyle(isSelected ? .white : .primary)
+        }
+        .buttonStyle(.plain)
     }
 
     // MARK: - Quote
@@ -196,8 +208,8 @@ struct HomeView: View {
                 Spacer()
             }
             Text("\(dailyQuote)")
-                .font(.system(size: 17, weight: .medium, design: .rounded))
-                .multilineTextAlignment(.center)
+                .font(.system(size: 15, weight: .regular, design: .rounded))
+                .multilineTextAlignment(.leading)
                 .foregroundStyle(.primary)
                 .lineSpacing(3)
                 .padding(.horizontal, 4)
@@ -218,40 +230,35 @@ struct HomeView: View {
 
     private var doDontRow: some View {
         HStack(alignment: .top, spacing: 12) {
-            doCard
-            dontCard
+            doDontCard(
+                label: "Do",
+                icon: "checkmark.circle.fill",
+                iconColor: .green,
+                text: dailyDo
+            )
+            doDontCard(
+                label: "Don't",
+                icon: "xmark.circle.fill",
+                iconColor: .red.opacity(0.75),
+                text: dailyDont
+            )
         }
     }
 
-    private var doCard: some View {
+    private func doDontCard(label: String, icon: String, iconColor: Color, text: String) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Label("Do today", systemImage: "checkmark.circle.fill")
-                .font(.caption.bold())
-                .foregroundStyle(.green)
-            Text(dailyDo)
-                .font(.subheadline)
-                .foregroundStyle(.primary)
-                .fixedSize(horizontal: false, vertical: true)
+            Label(label, systemImage: icon)
+                .font(.subheadline.bold())
+                .foregroundStyle(iconColor)
+            Text(text)
+                .font(.caption)
+                .foregroundStyle(.secondary)
                 .lineSpacing(2)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Spacer(minLength: 0)
         }
         .padding(14)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 18).fill(.white.opacity(0.62)))
-    }
-
-    private var dontCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Label("Avoid", systemImage: "xmark.circle.fill")
-                .font(.caption.bold())
-                .foregroundStyle(.red.opacity(0.75))
-            Text(dailyDont)
-                .font(.subheadline)
-                .foregroundStyle(.primary)
-                .fixedSize(horizontal: false, vertical: true)
-                .lineSpacing(2)
-        }
-        .padding(14)
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(RoundedRectangle(cornerRadius: 18).fill(.white.opacity(0.62)))
     }
 
@@ -325,11 +332,16 @@ struct HomeView: View {
     private var recipesSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Recipes to enjoy")
-                .font(.caption.bold())
+                .font(.subheadline.bold())
                 .textCase(.uppercase)
                 .kerning(1.2)
                 .foregroundStyle(.secondary)
                 .padding(.horizontal, 4)
+            
+            Text(content.tip)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .padding(.horizontal, 8)
 
             ForEach(content.recipes) { recipe in
                 HStack(spacing: 12) {

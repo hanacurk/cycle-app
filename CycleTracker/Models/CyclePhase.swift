@@ -17,8 +17,8 @@ enum CyclePhase: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .menstrual:  return Color(hex: "#D96C8E")
         case .follicular: return Color(hex: "#C2A100")
-        case .ovulation:  return Color(hex: "#4B93AA")
-        case .luteal:     return Color(hex: "#649864")
+        case .ovulation:  return Color(hex: "#5EA883")
+        case .luteal:     return Color(hex: "#4F8FB1")
         }
     }
 
@@ -26,8 +26,8 @@ enum CyclePhase: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .menstrual:  return Color(hex: "#FF8FAB")
         case .follicular: return Color(hex: "#F0C830")
-        case .ovulation:  return Color(hex: "#7DD4E8")
-        case .luteal:     return Color(hex: "#80C880")
+        case .ovulation:  return Color(hex: "#7FCC9F")
+        case .luteal:     return Color(hex: "#7DD4E8")
         }
     }
 
@@ -35,8 +35,8 @@ enum CyclePhase: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .menstrual:  return Color(hex: "#FFB8CC")
         case .follicular: return Color(hex: "#FFE860")
-        case .ovulation:  return Color(hex: "#A8D8F0")
-        case .luteal:     return Color(hex: "#A8E0A8")
+        case .ovulation:  return Color(hex: "#BCE7CC")
+        case .luteal:     return Color(hex: "#B3DEF3")
         }
     }
 
@@ -44,8 +44,8 @@ enum CyclePhase: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .menstrual:  return Color(hex: "#FFD8E0")
         case .follicular: return Color(hex: "#FFF5A0")
-        case .ovulation:  return Color(hex: "#C8E8F0")
-        case .luteal:     return Color(hex: "#D8F0D8")
+        case .ovulation:  return Color(hex: "#DDF3E3")
+        case .luteal:     return Color(hex: "#D5ECF8")
         }
     }
 

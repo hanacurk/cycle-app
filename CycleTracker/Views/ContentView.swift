@@ -16,6 +16,7 @@ struct ContentView: View {
                     Label("Calendar", systemImage: "calendar")
                 }
         }
+        .fontDesign(.rounded)
         .tint(activePhase.color)
     }
 
