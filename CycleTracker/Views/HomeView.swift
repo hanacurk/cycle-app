@@ -7,6 +7,7 @@ struct HomeView: View {
     @State private var viewModel = CycleViewModel()
     @State private var showingQuickLog = false
     @State private var showingNewCycle = false
+    @State private var newStartDate = Date()
     @State private var newCycleLength = 28
     @State private var newPeriodLength = 5
 
@@ -23,7 +24,7 @@ struct HomeView: View {
             .toolbar {
                 if viewModel.hasData {
                     ToolbarItem(placement: .primaryAction) {
-                        Button { showingNewCycle = true } label: {
+                        Button { prepareNewCycleForm() } label: {
                             Image(systemName: "plus")
                         }
                     }
@@ -32,22 +33,14 @@ struct HomeView: View {
             .sheet(isPresented: $showingQuickLog) {
                 LogSymptomView(dismissible: true)
             }
-            .alert("Start New Cycle", isPresented: $showingNewCycle) {
-                TextField("Cycle Length", value: $newCycleLength, format: .number)
-                TextField("Period Length", value: $newPeriodLength, format: .number)
-                Button("Start") {
-                    viewModel.startNewCycle(
-                        context: modelContext,
-                        cycleLength: newCycleLength,
-                        periodLength: newPeriodLength
-                    )
-                }
-                Button("Cancel", role: .cancel) { }
-            } message: {
-                Text("Enter your typical cycle and period length in days.")
+            .sheet(isPresented: $showingNewCycle) {
+                newCycleSheet
             }
             .onAppear { viewModel.update(with: cycles) }
             .onChange(of: cycles.count) { _, _ in viewModel.update(with: cycles) }
+            .onChange(of: newCycleLength) { _, newValue in
+                newPeriodLength = min(newPeriodLength, newValue)
+            }
         }
     }
 
@@ -66,7 +59,7 @@ struct HomeView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
             Button("Start New Cycle") {
-                showingNewCycle = true
+                prepareNewCycleForm()
             }
             .buttonStyle(.borderedProminent)
             .tint(.pink)
@@ -149,6 +142,72 @@ struct HomeView: View {
                 .background(RoundedRectangle(cornerRadius: 16).fill(.pink))
                 .foregroundStyle(.white)
         }
+    }
+
+    private var newCycleSheet: some View {
+        NavigationStack {
+            Form {
+                Section("Period Start Date") {
+                    DatePicker(
+                        "Start Date",
+                        selection: $newStartDate,
+                        in: ...Date(),
+                        displayedComponents: .date
+                    )
+                }
+
+                Section("Cycle Settings") {
+                    Stepper(value: $newCycleLength, in: 15...60) {
+                        HStack {
+                            Text("Cycle Length")
+                            Spacer()
+                            Text("\(newCycleLength) days")
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+
+                    Stepper(value: $newPeriodLength, in: 1...min(14, newCycleLength)) {
+                        HStack {
+                            Text("Period Length")
+                            Spacer()
+                            Text("\(newPeriodLength) days")
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+
+                Section {
+                    Text("If this is your first entry, previous cycle starts for the past year are generated automatically based on your cycle length.")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .navigationTitle("Start New Cycle")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { showingNewCycle = false }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        viewModel.startNewCycle(
+                            context: modelContext,
+                            existingCycles: cycles,
+                            startDate: newStartDate,
+                            cycleLength: newCycleLength,
+                            periodLength: newPeriodLength
+                        )
+                        showingNewCycle = false
+                    }
+                }
+            }
+        }
+    }
+
+    private func prepareNewCycleForm() {
+        newCycleLength = max(viewModel.cycleLength, 15)
+        newPeriodLength = min(max(viewModel.periodLength, 1), min(14, newCycleLength))
+        newStartDate = Date()
+        showingNewCycle = true
     }
 }
 
