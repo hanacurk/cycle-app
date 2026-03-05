@@ -115,27 +115,29 @@ struct HomeView: View {
     private var dailyDont: String  { PhaseContentLoader.shared.dailyItem(from: content.donts,  phase: displayedPhase, offset: 2) }
 
     var body: some View {
-        NavigationStack {
-            ZStack {
-                displayedPhase.backgroundTint.opacity(0.58)
-                    .ignoresSafeArea()
-                    .animation(.easeInOut(duration: 0.4), value: displayedPhase)
-
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 14) {
-                        headerCard
-                        phaseSelector
-                        doDontRow
-                        seedsCard
-                        foodsCard
-                        recipesSection
+        GeometryReader { geometry in
+            NavigationStack {
+                ZStack {
+                    displayedPhase.backgroundTint.opacity(0.58)
+                        .ignoresSafeArea()
+                        .animation(.easeInOut(duration: 0.4), value: displayedPhase)
+                    
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 14) {
+                            headerCard
+                            phaseSelector
+                            doDontRow
+                            seedsCard
+                            foodsCard
+                            recipesSection
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.top, 4)
+                        .padding(.bottom, 32)
+                        .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? min(390, geometry.size.width * 0.6) : nil)
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.top, 4)
-                    .padding(.bottom, 32)
                 }
             }
-            .navigationTitle("Today")
         }
     }
 

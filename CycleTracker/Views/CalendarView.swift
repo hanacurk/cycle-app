@@ -13,43 +13,45 @@ struct CalendarView: View {
     @State private var newPeriodLength = 5
 
     var body: some View {
-        NavigationStack {
-            ZStack {
-                backgroundPhase.backgroundTint.opacity(0.55)
-                    .ignoresSafeArea()
-
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 16) {
-                        monthNavigation
-
-                        if let sel = selectedDate {
-                            selectedDateDetail(for: sel)
+        GeometryReader { geometry in
+            NavigationStack {
+                ZStack {
+                    backgroundPhase.backgroundTint.opacity(0.55)
+                        .ignoresSafeArea()
+                    
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 16) {
+                            monthNavigation
+                            
+                            if let sel = selectedDate {
+                                selectedDateDetail(for: sel)
+                            }
+                            
+                            calendarGrid
+                            phaseLegend
                         }
-
-                        calendarGrid
-                        phaseLegend
-                    }
-                    .padding(.bottom, 24)
-                }
-            }
-            .fontDesign(.rounded)
-            .navigationTitle("Calendar")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        prepareAddPeriodForm()
-                        showingAddPeriod = true
-                    } label: {
-                        Label("Add Period", systemImage: "plus")
+                        .padding(.bottom, 24)
+                        .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? min(390, geometry.size.width * 0.6) : nil)
                     }
                 }
-            }
-            .sheet(isPresented: $showingAddPeriod) {
-                addPeriodSheet
-            }
-            .onAppear {
-                if selectedDate == nil {
-                    selectedDate = Calendar.current.startOfDay(for: Date())
+                .fontDesign(.rounded)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            prepareAddPeriodForm()
+                            showingAddPeriod = true
+                        } label: {
+                            Label("Add Period", systemImage: "plus")
+                        }
+                    }
+                }
+                .sheet(isPresented: $showingAddPeriod) {
+                    addPeriodSheet
+                }
+                .onAppear {
+                    if selectedDate == nil {
+                        selectedDate = Calendar.current.startOfDay(for: Date())
+                    }
                 }
             }
         }
