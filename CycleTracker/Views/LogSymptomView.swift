@@ -4,6 +4,7 @@ import SwiftData
 struct LogSymptomView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @Query(sort: \CycleRecord.startDate, order: .reverse) private var cycles: [CycleRecord]
 
     let dismissible: Bool
 
@@ -22,6 +23,18 @@ struct LogSymptomView: View {
     var body: some View {
         NavigationStack {
             Form {
+                Section {
+                    HStack(spacing: 12) {
+                        PhaseBlobCharacterView(phase: backgroundPhase, size: 70)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Quick check-in")
+                                .font(.headline)
+                            Text("Log how you feel today.")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
                 Section("Date") {
                     DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
                 }
@@ -39,11 +52,11 @@ struct LogSymptomView: View {
                                 .padding(8)
                                 .background(
                                     RoundedRectangle(cornerRadius: 12)
-                                        .fill(selectedMood == mood ? Color.pink.opacity(0.2) : Color.clear)
+                                        .fill(selectedMood == mood ? backgroundPhase.color.opacity(0.2) : Color.clear)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12)
-                                        .stroke(selectedMood == mood ? Color.pink : Color.clear, lineWidth: 1.5)
+                                        .stroke(selectedMood == mood ? backgroundPhase.color : Color.clear, lineWidth: 1.5)
                                 )
                                 .onTapGesture {
                                     selectedMood = selectedMood == mood ? nil : mood
@@ -85,6 +98,8 @@ struct LogSymptomView: View {
                         .frame(minHeight: 80)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(backgroundPhase.backgroundTint.opacity(0.55))
             .navigationTitle("Log Symptoms")
             .toolbar {
                 if dismissible {
@@ -102,6 +117,10 @@ struct LogSymptomView: View {
                 }
             }
         }
+    }
+
+    private var backgroundPhase: CyclePhase {
+        CycleCalculator.phase(for: Date(), cycles: cycles) ?? .follicular
     }
 
     // MARK: - Save confirmation overlay

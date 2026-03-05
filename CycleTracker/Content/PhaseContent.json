@@ -1,0 +1,790 @@
+{
+  "menstrual": {
+    "tagline": "Warm & nourishing",
+    "tip": "Iron-rich foods help replenish what you lose.",
+    "bodyExplanation": "Your estrogen and progesterone are at their lowest right now. Your uterine lining is shedding, which is why you might feel tired, crampy or more emotional than usual. This is a natural reset — your body is doing exactly what it should.",
+    "seeds": [
+      "Flaxseeds",
+      "Pumpkin seeds"
+    ],
+    "quotes": [
+      "Rest is not laziness. It's wisdom.",
+      "You don't have to earn your rest.",
+      "Slowing down is its own kind of strength.",
+      "Be gentle with yourself today.",
+      "Your body is working hard. Let it.",
+      "Some days, surviving is enough.",
+      "Stillness is productive too.",
+      "You are allowed to do less.",
+      "Warmth, comfort, and quiet — that's the assignment today.",
+      "Honor the ebb as much as the flow.",
+      "There is power in going inward.",
+      "Rest now so you can bloom later.",
+      "Your sensitivity right now is not weakness — it's depth.",
+      "Not every day needs to be a big day.",
+      "Give yourself the same care you'd give someone you love.",
+      "Today, let things be enough as they are.",
+      "Softness is not fragility.",
+      "The quietest days are sometimes the most necessary.",
+      "You are not behind. You are exactly where you need to be.",
+      "This phase will pass. Be patient with your body.",
+      "Cozy is a valid life choice.",
+      "You can reschedule the world.",
+      "Your body knows what it's doing.",
+      "Let yourself be held by rest.",
+      "Low energy is information, not failure."
+    ],
+    "dos": [
+      "Drink warm water or herbal tea throughout the day",
+      "Use a heat pad on your lower abdomen if cramping",
+      "Go to bed 30 minutes earlier than usual",
+      "Cancel or reschedule things that feel like too much",
+      "Eat something warm and iron-rich",
+      "Take a slow walk outside if you have energy",
+      "Give yourself permission to say no today",
+      "Watch something comforting instead of stimulating",
+      "Eat dark chocolate — seriously, it helps",
+      "Have a bath or a long warm shower",
+      "Take a nap if your body is asking for one",
+      "Write down how you're feeling — it can help",
+      "Call or text someone who makes you feel safe",
+      "Wear the most comfortable thing you own",
+      "Eat little and often rather than big meals"
+    ],
+    "donts": [
+      "Don't push through exhaustion just to seem productive",
+      "Don't skip meals — your blood sugar needs stability",
+      "Don't make big decisions if you're feeling low",
+      "Don't compare your energy to other days or other people",
+      "Don't drink too much coffee — it can worsen cramps",
+      "Don't overload your schedule",
+      "Don't feel guilty for needing more rest than usual",
+      "Don't ignore pain that feels unusually severe",
+      "Don't do intense exercise if your body is saying no",
+      "Don't spend too much time doom-scrolling",
+      "Don't expect yourself to be at your social best right now",
+      "Don't ignore your cravings entirely — they're signals",
+      "Don't hold your breath — breathe deeply and slowly",
+      "Don't try to power through with caffeine alone",
+      "Don't judge your mood — it will shift"
+    ],
+    "recipes": [
+      {
+        "name": "Lentil & Spinach Soup",
+        "emoji": "🍲",
+        "description": "Warming red lentil soup with wilted spinach and a squeeze of lemon"
+      },
+      {
+        "name": "Golden Milk Porridge",
+        "emoji": "🥣",
+        "description": "Oats with ginger, turmeric, banana and almond butter"
+      },
+      {
+        "name": "Tofu Stir-Fry",
+        "emoji": "🥢",
+        "description": "Crispy tofu and seasonal veggies over brown rice with tamari"
+      },
+      {
+        "name": "Black Bean Tacos",
+        "emoji": "🌮",
+        "description": "Spiced black beans with avocado, lime crema and pickled red onion"
+      },
+      {
+        "name": "Mushroom Risotto",
+        "emoji": "🍄",
+        "description": "Creamy arborio rice with mixed mushrooms, white wine and parmesan"
+      },
+      {
+        "name": "Sweet Potato Chickpea Curry",
+        "emoji": "🍛",
+        "description": "Coconut milk curry with sweet potato, chickpeas and fresh coriander"
+      },
+      {
+        "name": "Beetroot Hummus & Pitta",
+        "emoji": "🫓",
+        "description": "Roasted beetroot hummus with warm pitta and olive oil drizzle"
+      },
+      {
+        "name": "Miso Tofu Soup",
+        "emoji": "🍜",
+        "description": "White miso broth with silken tofu, wakame and spring onion"
+      },
+      {
+        "name": "Dark Chocolate Smoothie",
+        "emoji": "🍫",
+        "description": "Banana, cacao, almond milk and a spoonful of peanut butter"
+      },
+      {
+        "name": "Spinach Dahl",
+        "emoji": "🫘",
+        "description": "Red lentil dahl with spinach, cumin and warm naan bread"
+      },
+      {
+        "name": "Tahini Baked Sweet Potato",
+        "emoji": "🍠",
+        "description": "Roasted sweet potato topped with tahini, pomegranate and parsley"
+      },
+      {
+        "name": "Red Bean Chili",
+        "emoji": "🌶️",
+        "description": "Smoky kidney bean chili with chipotle, served with sour cream"
+      },
+      {
+        "name": "Pumpkin Soup",
+        "emoji": "🎃",
+        "description": "Velvety roasted pumpkin soup with toasted pepitas and cream"
+      },
+      {
+        "name": "Roasted Beet Quinoa Bowl",
+        "emoji": "🥗",
+        "description": "Warm quinoa with roasted beets, feta, walnuts and balsamic"
+      },
+      {
+        "name": "Ginger Tea & Oat Cookies",
+        "emoji": "🫖",
+        "description": "Soft oat cookies with crystallised ginger and dark chocolate chips"
+      }
+    ],
+    "foods": [
+      {
+        "name": "Spinach",
+        "emoji": "🥬"
+      },
+      {
+        "name": "Lentils",
+        "emoji": "🫘"
+      },
+      {
+        "name": "Dark chocolate",
+        "emoji": "🍫"
+      },
+      {
+        "name": "Ginger",
+        "emoji": "🫚"
+      },
+      {
+        "name": "Beetroot",
+        "emoji": "🫀"
+      },
+      {
+        "name": "Pumpkin seeds",
+        "emoji": "🌰"
+      },
+      {
+        "name": "Sweet potato",
+        "emoji": "🍠"
+      },
+      {
+        "name": "Chamomile tea",
+        "emoji": "🫖"
+      },
+      {
+        "name": "Bananas",
+        "emoji": "🍌"
+      },
+      {
+        "name": "Tofu",
+        "emoji": "🧊"
+      },
+      {
+        "name": "Turmeric",
+        "emoji": "🌿"
+      },
+      {
+        "name": "Kidney beans",
+        "emoji": "🫘"
+      }
+    ]
+  },
+  "follicular": {
+    "tagline": "Light & energising",
+    "tip": "Estrogen is rising — fresh meals support your energy levels.",
+    "bodyExplanation": "Estrogen is climbing and your energy is returning. Your body is preparing to ovulate — follicles in your ovaries are growing and one is getting ready to release an egg. You might notice sharper focus, better mood and a genuine desire to get things done. This is a great time to start new projects.",
+    "seeds": [
+      "Flaxseeds",
+      "Pumpkin seeds"
+    ],
+    "quotes": [
+      "New energy, new possibilities.",
+      "You're just getting started.",
+      "Spring is coming — inside and out.",
+      "Plant the seeds of what you want to grow.",
+      "Your momentum is building.",
+      "Say yes to the things that excite you.",
+      "This is your fresh start energy.",
+      "Clarity is returning — use it.",
+      "You have more capacity than you think.",
+      "Ideas are flowing. Write them down.",
+      "Something new is beginning.",
+      "Let yourself be curious today.",
+      "This is the energy you've been waiting for.",
+      "You're allowed to feel good.",
+      "Step into this phase with openness.",
+      "Your body is waking up. Let your mind follow.",
+      "Do the thing you've been putting off.",
+      "This is a good week to begin.",
+      "Lean into the lightness.",
+      "You have the energy — trust it.",
+      "Small actions now create big momentum later.",
+      "Optimism looks good on you.",
+      "Let your ideas out of your head and into the world.",
+      "The fog is lifting.",
+      "This phase is an invitation — say yes."
+    ],
+    "dos": [
+      "Start something you've been putting off",
+      "Try a new recipe or a new place for lunch",
+      "Write down your ideas — your brain is sharp right now",
+      "Make plans with people you enjoy",
+      "Go outside and move your body in a way that feels good",
+      "Tackle the task on your to-do list you've been avoiding",
+      "Learn something new — your brain is absorbing well",
+      "Set an intention for the next few weeks",
+      "Book something to look forward to",
+      "Say yes to a social invitation",
+      "Eat fresh, colourful food",
+      "Start a new habit — this is the best phase for it",
+      "Have a longer conversation with someone interesting",
+      "Get some morning sunlight",
+      "Do something creative just for fun"
+    ],
+    "donts": [
+      "Don't waste this energy on things that don't matter to you",
+      "Don't overcommit just because you feel good",
+      "Don't skip breakfast — fuel your rising energy",
+      "Don't isolate if you're feeling social — lean into it",
+      "Don't second-guess your ideas before you've written them down",
+      "Don't ignore your intuition",
+      "Don't stay up too late — protect your sleep even now",
+      "Don't spend all your energy on other people's priorities",
+      "Don't forget to hydrate — energy phases can make you forget",
+      "Don't rush past the good feeling — notice it",
+      "Don't take on so much that you crash by ovulation",
+      "Don't let perfectionism stop you from starting",
+      "Don't skip the things that bring you joy",
+      "Don't ignore signs of stress just because energy is high",
+      "Don't forget this phase doesn't last forever — use it well"
+    ],
+    "recipes": [
+      {
+        "name": "Berry Yogurt Bowl",
+        "emoji": "🫐",
+        "description": "Greek yogurt with mixed berries, flaxseed and a drizzle of honey"
+      },
+      {
+        "name": "Avocado Toast",
+        "emoji": "🥑",
+        "description": "Sourdough with smashed avocado, poached egg and chili flakes"
+      },
+      {
+        "name": "Spinach Feta Omelette",
+        "emoji": "🍳",
+        "description": "Fluffy omelette with baby spinach, feta and sun-dried tomatoes"
+      },
+      {
+        "name": "Quinoa Tabbouleh",
+        "emoji": "🌿",
+        "description": "Quinoa with cucumber, mint, parsley, lemon and olive oil"
+      },
+      {
+        "name": "Zucchini Pesto Noodles",
+        "emoji": "🍝",
+        "description": "Spiralised zucchini with homemade basil pesto and cherry tomatoes"
+      },
+      {
+        "name": "Mango Smoothie Bowl",
+        "emoji": "🥭",
+        "description": "Blended mango and banana topped with granola, kiwi and coconut"
+      },
+      {
+        "name": "Edamame Rice Bowl",
+        "emoji": "🌾",
+        "description": "Brown rice with edamame, cucumber, avocado and sesame dressing"
+      },
+      {
+        "name": "Broccoli White Bean Soup",
+        "emoji": "🥦",
+        "description": "Blended broccoli and cannellini bean soup with lemon and garlic"
+      },
+      {
+        "name": "Tofu Spring Rolls",
+        "emoji": "🌯",
+        "description": "Rice paper rolls with tofu, vermicelli, herbs and peanut sauce"
+      },
+      {
+        "name": "Lemon Ricotta Pancakes",
+        "emoji": "🥞",
+        "description": "Fluffy lemon ricotta pancakes with blueberry compote"
+      },
+      {
+        "name": "Roasted Veggie Wrap",
+        "emoji": "🫔",
+        "description": "Wholegrain wrap with roasted peppers, hummus and rocket"
+      },
+      {
+        "name": "Mango Black Bean Salad",
+        "emoji": "🥗",
+        "description": "Sweet mango, black beans, red onion and coriander with lime dressing"
+      },
+      {
+        "name": "Asparagus Frittata",
+        "emoji": "🥚",
+        "description": "Baked frittata with asparagus, goat cheese and fresh dill"
+      },
+      {
+        "name": "Berry Chia Pudding",
+        "emoji": "🍓",
+        "description": "Overnight chia pudding with coconut milk and fresh berry compote"
+      },
+      {
+        "name": "Green Detox Juice",
+        "emoji": "🥤",
+        "description": "Cucumber, celery, apple, ginger and spinach cold-pressed juice"
+      }
+    ],
+    "foods": [
+      {
+        "name": "Avocado",
+        "emoji": "🥑"
+      },
+      {
+        "name": "Broccoli",
+        "emoji": "🥦"
+      },
+      {
+        "name": "Eggs",
+        "emoji": "🥚"
+      },
+      {
+        "name": "Berries",
+        "emoji": "🫐"
+      },
+      {
+        "name": "Flaxseeds",
+        "emoji": "🌾"
+      },
+      {
+        "name": "Fermented foods",
+        "emoji": "🥒"
+      },
+      {
+        "name": "Green tea",
+        "emoji": "🍵"
+      },
+      {
+        "name": "Quinoa",
+        "emoji": "🌿"
+      },
+      {
+        "name": "Almonds",
+        "emoji": "🌰"
+      },
+      {
+        "name": "Citrus fruits",
+        "emoji": "🍊"
+      },
+      {
+        "name": "Leafy greens",
+        "emoji": "🥬"
+      },
+      {
+        "name": "Pumpkin",
+        "emoji": "🎃"
+      }
+    ]
+  },
+  "ovulation": {
+    "tagline": "Fresh & vibrant",
+    "tip": "Anti-inflammatory foods support your peak energy days.",
+    "bodyExplanation": "You're at or near peak estrogen right now, and a mature egg has been released from your ovary. LH (luteinising hormone) surged to make that happen. You're likely at your most energetic, confident and communicative. Your body temperature rises slightly after ovulation and you may feel more outgoing than usual.",
+    "seeds": [
+      "Sesame seeds",
+      "Sunflower seeds"
+    ],
+    "quotes": [
+      "You are at your most radiant.",
+      "Speak up — your voice carries right now.",
+      "This is your peak. Use it with intention.",
+      "Confidence looks good on you.",
+      "Say the thing you've been holding back.",
+      "You are magnetic right now.",
+      "Show up fully today.",
+      "Your energy is contagious — share it wisely.",
+      "Go for it. Seriously.",
+      "This is the week to make the ask.",
+      "You have everything you need right now.",
+      "Trust yourself completely today.",
+      "Your presence is powerful.",
+      "Connect deeply with someone today.",
+      "Be seen. You deserve to be.",
+      "Your best ideas are ready to be shared.",
+      "This energy is a gift — don't waste it on doubt.",
+      "Lead with warmth and watch what opens up.",
+      "You are in full bloom.",
+      "Make the call. Send the email. Have the conversation.",
+      "Now is the time for bold moves.",
+      "Stand in your light today.",
+      "You have more to offer than you realise.",
+      "This is your moment — step into it.",
+      "Shine without apology."
+    ],
+    "dos": [
+      "Have the important conversation you've been avoiding",
+      "Schedule a presentation, interview or important meeting",
+      "Spend time with people who energise you",
+      "Ask for what you want — your confidence is high",
+      "Do something that makes you feel beautiful or powerful",
+      "Connect with a friend you haven't spoken to in a while",
+      "Go somewhere new or try something different",
+      "Say yes to the social thing",
+      "Do your most challenging work today",
+      "Move your body in a way that feels strong",
+      "Eat light, fresh and colourful food",
+      "Take photos — you're glowing",
+      "Collaborate — you work well with others right now",
+      "Pitch your idea, make your case, tell your story",
+      "Celebrate something, even something small"
+    ],
+    "donts": [
+      "Don't overextend yourself trying to do everything at once",
+      "Don't say yes to things you'll resent later",
+      "Don't neglect sleep just because energy is high",
+      "Don't forget to eat — it's easy to skip meals during this phase",
+      "Don't take on other people's emotional labour",
+      "Don't ignore your need for quiet time too",
+      "Don't make permanent decisions based purely on high energy",
+      "Don't confuse confidence with certainty",
+      "Don't forget that people who drain you still drain you",
+      "Don't skip sunscreen — your skin can be more sensitive",
+      "Don't overdo caffeine",
+      "Don't let the high mask things that still need attention",
+      "Don't forget to drink water",
+      "Don't spread yourself too thin just because you can",
+      "Don't ignore your body's signals even when energy is high"
+    ],
+    "recipes": [
+      {
+        "name": "Strawberry Spinach Salad",
+        "emoji": "🍓",
+        "description": "Baby spinach with strawberries, walnuts, feta and poppy seed dressing"
+      },
+      {
+        "name": "Chickpea Mediterranean Salad",
+        "emoji": "🫘",
+        "description": "Chickpeas with cucumber, tomato, olives and lemon-herb vinaigrette"
+      },
+      {
+        "name": "Watermelon Feta Salad",
+        "emoji": "🍉",
+        "description": "Juicy watermelon with crumbled feta, mint and a balsamic glaze"
+      },
+      {
+        "name": "Mango Avocado Rolls",
+        "emoji": "🥑",
+        "description": "Rice paper rolls with mango, avocado, cucumber and sweet chili sauce"
+      },
+      {
+        "name": "Roasted Pepper Lentil Salad",
+        "emoji": "🌶️",
+        "description": "Puy lentils with roasted peppers, capers and a mustard dressing"
+      },
+      {
+        "name": "Tomato Bruschetta",
+        "emoji": "🍅",
+        "description": "Grilled sourdough with heirloom tomatoes, fresh basil and garlic oil"
+      },
+      {
+        "name": "Chilled Gazpacho",
+        "emoji": "🍵",
+        "description": "Blended fresh tomato, cucumber, pepper and garlic soup served cold"
+      },
+      {
+        "name": "Acai Bowl",
+        "emoji": "🫐",
+        "description": "Thick acai base with banana, granola, coconut flakes and fresh fruit"
+      },
+      {
+        "name": "Green Goddess Salad",
+        "emoji": "🥬",
+        "description": "Shredded greens with avocado tahini dressing and toasted seeds"
+      },
+      {
+        "name": "Stuffed Bell Peppers",
+        "emoji": "🫑",
+        "description": "Roasted peppers filled with quinoa, black beans and melted cheese"
+      },
+      {
+        "name": "Soba Edamame Salad",
+        "emoji": "🍜",
+        "description": "Cold soba noodles with edamame, cucumber, sesame and rice vinegar"
+      },
+      {
+        "name": "Beet & Orange Salad",
+        "emoji": "🍊",
+        "description": "Roasted beets with orange segments, arugula and candied walnuts"
+      },
+      {
+        "name": "Caprese Salad",
+        "emoji": "🧀",
+        "description": "Heirloom tomatoes with fresh mozzarella, basil and good olive oil"
+      },
+      {
+        "name": "Zucchini Corn Fritters",
+        "emoji": "🌽",
+        "description": "Crispy fritters with zucchini and corn, served with tzatziki"
+      },
+      {
+        "name": "Rainbow Buddha Bowl",
+        "emoji": "🌈",
+        "description": "Roasted veggies, grains, greens and hummus with tahini drizzle"
+      }
+    ],
+    "foods": [
+      {
+        "name": "Strawberries",
+        "emoji": "🍓"
+      },
+      {
+        "name": "Watermelon",
+        "emoji": "🍉"
+      },
+      {
+        "name": "Asparagus",
+        "emoji": "🌿"
+      },
+      {
+        "name": "Sunflower seeds",
+        "emoji": "🌻"
+      },
+      {
+        "name": "Sesame seeds",
+        "emoji": "🌾"
+      },
+      {
+        "name": "Tomatoes",
+        "emoji": "🍅"
+      },
+      {
+        "name": "Figs",
+        "emoji": "🫐"
+      },
+      {
+        "name": "Chickpeas",
+        "emoji": "🫘"
+      },
+      {
+        "name": "Leafy greens",
+        "emoji": "🥬"
+      },
+      {
+        "name": "Mango",
+        "emoji": "🥭"
+      },
+      {
+        "name": "Coconut water",
+        "emoji": "🥥"
+      },
+      {
+        "name": "Bell peppers",
+        "emoji": "🫑"
+      }
+    ]
+  },
+  "luteal": {
+    "tagline": "Comforting & grounding",
+    "tip": "Complex carbs and magnesium-rich foods help ease PMS and stabilise mood.",
+    "bodyExplanation": "Progesterone is now dominant and estrogen is declining. If the egg wasn't fertilised, your body is preparing to shed the lining again. You might feel more introspective, sensitive or easily overwhelmed. This is completely normal — your nervous system is more reactive right now and you need more rest than usual.",
+    "seeds": [
+      "Sesame seeds",
+      "Sunflower seeds"
+    ],
+    "quotes": [
+      "You don't have to be on all the time.",
+      "Boundaries are an act of self-respect.",
+      "It's okay to need more than usual right now.",
+      "Your feelings are valid — all of them.",
+      "You're allowed to turn down the volume on the world.",
+      "Protect your peace today.",
+      "Not everyone deserves your energy right now.",
+      "There is nothing wrong with needing comfort.",
+      "Notice what's draining you and step back.",
+      "You can feel it all and still be okay.",
+      "This is a season of reflection, not failure.",
+      "You are not too much. You are just in the luteal phase.",
+      "Let yourself want what you want.",
+      "Be honest about your limits today.",
+      "Your sensitivity is a feature, not a bug.",
+      "Take up the space you need.",
+      "Rest before you're forced to.",
+      "Saying no is a complete sentence.",
+      "The world will wait — take care of yourself first.",
+      "You've done enough for today.",
+      "Let yourself be held by quiet.",
+      "Slow and steady is still moving forward.",
+      "It's okay if things feel heavier right now.",
+      "Protecting your energy is wise, not selfish.",
+      "This phase is asking you to come home to yourself."
+    ],
+    "dos": [
+      "Go to bed earlier — your body needs more sleep now",
+      "Eat magnesium-rich foods like dark chocolate, nuts and seeds",
+      "Reduce your to-do list to only the essentials",
+      "Say no to at least one thing today",
+      "Take a slow walk in nature if you can",
+      "Spend time doing something calming and creative",
+      "Check in with how you're actually feeling",
+      "Eat warm, comforting meals",
+      "Reduce caffeine — it can worsen anxiety this week",
+      "Tell someone close to you what you need",
+      "Do a gentle body scan and notice where you hold tension",
+      "Give yourself permission to cancel plans if needed",
+      "Drink chamomile or valerian tea in the evening",
+      "Do less and be more",
+      "Watch or read something that genuinely comforts you"
+    ],
+    "donts": [
+      "Don't overschedule — you'll feel it more this week",
+      "Don't dismiss your emotions as irrational",
+      "Don't have important confrontations if you're already depleted",
+      "Don't drink alcohol — it worsens PMS symptoms significantly",
+      "Don't skip meals — blood sugar crashes hit harder now",
+      "Don't compare how you feel now to how you felt last week",
+      "Don't take on new big commitments",
+      "Don't be hard on yourself for needing more",
+      "Don't scroll social media when you're already feeling low",
+      "Don't push through exhaustion",
+      "Don't isolate completely — light connection helps",
+      "Don't overanalyse things — your inner critic is louder now",
+      "Don't drink too much coffee",
+      "Don't make permanent decisions based on luteal feelings",
+      "Don't forget that this will pass in a few days"
+    ],
+    "recipes": [
+      {
+        "name": "Chickpea Spinach Curry",
+        "emoji": "🍛",
+        "description": "Creamy chickpea and spinach curry with basmati rice and naan"
+      },
+      {
+        "name": "Chocolate Overnight Oats",
+        "emoji": "🍫",
+        "description": "Overnight oats with cacao, banana, walnuts and a touch of maple"
+      },
+      {
+        "name": "Lentil Shepherd's Pie",
+        "emoji": "🥧",
+        "description": "Hearty lentil and mushroom base topped with fluffy mashed potato"
+      },
+      {
+        "name": "Sweet Potato Enchiladas",
+        "emoji": "🍠",
+        "description": "Roasted sweet potato and black bean enchiladas with verde sauce"
+      },
+      {
+        "name": "Banana Oat Bars",
+        "emoji": "🍌",
+        "description": "Soft baked bars with banana, oats, dark chocolate chips and flax"
+      },
+      {
+        "name": "Chamomile Porridge",
+        "emoji": "🌼",
+        "description": "Creamy oats steeped with chamomile, honey and toasted almonds"
+      },
+      {
+        "name": "Veggie Lasagne",
+        "emoji": "🫕",
+        "description": "Layered pasta with roasted veggies, rich tomato sauce and béchamel"
+      },
+      {
+        "name": "Peanut Butter Noodles",
+        "emoji": "🥜",
+        "description": "Udon noodles with creamy peanut sauce, broccoli and edamame"
+      },
+      {
+        "name": "Roasted Sweet Potato Bowl",
+        "emoji": "🥗",
+        "description": "Sweet potato, kale, chickpeas and tahini-lemon dressing"
+      },
+      {
+        "name": "Mushroom Soup",
+        "emoji": "🍄",
+        "description": "Silky cream of mushroom soup with thyme and crusty sourdough"
+      },
+      {
+        "name": "Warm Lentil Salad",
+        "emoji": "🫘",
+        "description": "Puy lentils with roasted carrots, goat cheese and walnut dressing"
+      },
+      {
+        "name": "Baked Mac & Cheese",
+        "emoji": "🧀",
+        "description": "Creamy homemade mac and cheese with a golden breadcrumb topping"
+      },
+      {
+        "name": "Veggie Fried Rice",
+        "emoji": "🍚",
+        "description": "Egg fried rice with peas, corn, carrot and a splash of soy sauce"
+      },
+      {
+        "name": "Stuffed Portobello Mushrooms",
+        "emoji": "🍄",
+        "description": "Portobellos filled with spinach, ricotta and sundried tomatoes"
+      },
+      {
+        "name": "Dark Chocolate Mousse",
+        "emoji": "🍮",
+        "description": "Light aquafaba chocolate mousse with raspberries and mint"
+      }
+    ],
+    "foods": [
+      {
+        "name": "Spinach",
+        "emoji": "🥬"
+      },
+      {
+        "name": "Dark chocolate",
+        "emoji": "🍫"
+      },
+      {
+        "name": "Sweet potato",
+        "emoji": "🍠"
+      },
+      {
+        "name": "Kimchi",
+        "emoji": "🥢"
+      },
+      {
+        "name": "Pumpkin seeds",
+        "emoji": "🌰"
+      },
+      {
+        "name": "Walnuts",
+        "emoji": "🪨"
+      },
+      {
+        "name": "Oats",
+        "emoji": "🌾"
+      },
+      {
+        "name": "Chamomile tea",
+        "emoji": "🫖"
+      },
+      {
+        "name": "Brown rice",
+        "emoji": "🍚"
+      },
+      {
+        "name": "Bananas",
+        "emoji": "🍌"
+      },
+      {
+        "name": "Lentils",
+        "emoji": "🫘"
+      },
+      {
+        "name": "Chickpeas",
+        "emoji": "🫘"
+      }
+    ]
+  }
+}

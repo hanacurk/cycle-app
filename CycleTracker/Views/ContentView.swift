@@ -1,6 +1,9 @@
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Query(sort: \CycleRecord.startDate, order: .reverse) private var cycles: [CycleRecord]
+
     var body: some View {
         TabView {
             HomeView()
@@ -12,17 +15,12 @@ struct ContentView: View {
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }
-
-            LogSymptomView()
-                .tabItem {
-                    Label("Log", systemImage: "plus.circle.fill")
-                }
-
-            CycleHistoryView()
-                .tabItem {
-                    Label("History", systemImage: "chart.bar.fill")
-                }
         }
-        .tint(.pink)
+        .fontDesign(.rounded)
+        .tint(activePhase.color)
+    }
+
+    private var activePhase: CyclePhase {
+        CycleCalculator.phase(for: Date(), cycles: cycles) ?? .follicular
     }
 }

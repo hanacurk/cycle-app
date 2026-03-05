@@ -1,0 +1,86 @@
+{
+  "menstrual": {
+    "tagline": "Warm & nourishing",
+    "tip": "Iron-rich foods help replenish what you lose.",
+    "recipes": [
+      { "name": "Lentil & Spinach Soup", "emoji": "🍲", "description": "Warming red lentil soup with wilted spinach and a squeeze of lemon" },
+      { "name": "Golden Milk Porridge", "emoji": "🥣", "description": "Oats with ginger, turmeric, banana and almond butter" },
+      { "name": "Tofu Stir-Fry", "emoji": "🥢", "description": "Crispy tofu and seasonal veggies over brown rice with tamari" },
+      { "name": "Black Bean Tacos", "emoji": "🌮", "description": "Spiced black beans with avocado, lime crema and pickled red onion" },
+      { "name": "Mushroom Risotto", "emoji": "🍄", "description": "Creamy arborio rice with mixed mushrooms, white wine and parmesan" },
+      { "name": "Sweet Potato Chickpea Curry", "emoji": "🍛", "description": "Coconut milk curry with sweet potato, chickpeas and fresh coriander" },
+      { "name": "Beetroot Hummus & Pitta", "emoji": "🫓", "description": "Roasted beetroot hummus with warm pitta and olive oil drizzle" },
+      { "name": "Miso Tofu Soup", "emoji": "🍜", "description": "White miso broth with silken tofu, wakame and spring onion" },
+      { "name": "Dark Chocolate Smoothie", "emoji": "🍫", "description": "Banana, cacao, almond milk and a spoonful of peanut butter" },
+      { "name": "Spinach Dahl", "emoji": "🫘", "description": "Red lentil dahl with spinach, cumin and warm naan bread" },
+      { "name": "Tahini Baked Sweet Potato", "emoji": "🍠", "description": "Roasted sweet potato topped with tahini, pomegranate and parsley" },
+      { "name": "Red Bean Chili", "emoji": "🌶️", "description": "Smoky kidney bean chili with chipotle, served with sour cream" },
+      { "name": "Pumpkin Soup", "emoji": "🎃", "description": "Velvety roasted pumpkin soup with toasted pepitas and cream" },
+      { "name": "Roasted Beet Quinoa Bowl", "emoji": "🥗", "description": "Warm quinoa with roasted beets, feta, walnuts and balsamic" },
+      { "name": "Ginger Tea & Oat Cookies", "emoji": "🫖", "description": "Soft oat cookies with crystallised ginger and dark chocolate chips" }
+    ]
+  },
+  "follicular": {
+    "tagline": "Light & energising",
+    "tip": "Estrogen is rising — fresh meals support your energy levels.",
+    "recipes": [
+      { "name": "Berry Yogurt Bowl", "emoji": "🫐", "description": "Greek yogurt with mixed berries, flaxseed and a drizzle of honey" },
+      { "name": "Avocado Toast", "emoji": "🥑", "description": "Sourdough with smashed avocado, poached egg and chili flakes" },
+      { "name": "Spinach Feta Omelette", "emoji": "🍳", "description": "Fluffy omelette with baby spinach, feta and sun-dried tomatoes" },
+      { "name": "Quinoa Tabbouleh", "emoji": "🌿", "description": "Quinoa with cucumber, mint, parsley, lemon and olive oil" },
+      { "name": "Zucchini Pesto Noodles", "emoji": "🍝", "description": "Spiralised zucchini with homemade basil pesto and cherry tomatoes" },
+      { "name": "Mango Smoothie Bowl", "emoji": "🥭", "description": "Blended mango and banana topped with granola, kiwi and coconut" },
+      { "name": "Edamame Rice Bowl", "emoji": "🌾", "description": "Brown rice with edamame, cucumber, avocado and sesame dressing" },
+      { "name": "Broccoli White Bean Soup", "emoji": "🥦", "description": "Blended broccoli and cannellini bean soup with lemon and garlic" },
+      { "name": "Tofu Spring Rolls", "emoji": "🌯", "description": "Rice paper rolls with tofu, vermicelli, herbs and peanut sauce" },
+      { "name": "Lemon Ricotta Pancakes", "emoji": "🥞", "description": "Fluffy lemon ricotta pancakes with blueberry compote" },
+      { "name": "Roasted Veggie Wrap", "emoji": "🫔", "description": "Wholegrain wrap with roasted peppers, hummus and rocket" },
+      { "name": "Mango Black Bean Salad", "emoji": "🥗", "description": "Sweet mango, black beans, red onion and coriander with lime dressing" },
+      { "name": "Asparagus Frittata", "emoji": "🥚", "description": "Baked frittata with asparagus, goat cheese and fresh dill" },
+      { "name": "Berry Chia Pudding", "emoji": "🍓", "description": "Overnight chia pudding with coconut milk and fresh berry compote" },
+      { "name": "Green Detox Juice", "emoji": "🥤", "description": "Cucumber, celery, apple, ginger and spinach cold-pressed juice" }
+    ]
+  },
+  "ovulation": {
+    "tagline": "Fresh & vibrant",
+    "tip": "Anti-inflammatory foods support your peak energy days.",
+    "recipes": [
+      { "name": "Strawberry Spinach Salad", "emoji": "🍓", "description": "Baby spinach with strawberries, walnuts, feta and poppy seed dressing" },
+      { "name": "Chickpea Mediterranean Salad", "emoji": "🫘", "description": "Chickpeas with cucumber, tomato, olives and lemon-herb vinaigrette" },
+      { "name": "Watermelon Feta Salad", "emoji": "🍉", "description": "Juicy watermelon with crumbled feta, mint and a balsamic glaze" },
+      { "name": "Mango Avocado Rolls", "emoji": "🥑", "description": "Rice paper rolls with mango, avocado, cucumber and sweet chili sauce" },
+      { "name": "Roasted Pepper Lentil Salad", "emoji": "🌶️", "description": "Puy lentils with roasted peppers, capers and a mustard dressing" },
+      { "name": "Tomato Bruschetta", "emoji": "🍅", "description": "Grilled sourdough with heirloom tomatoes, fresh basil and garlic oil" },
+      { "name": "Chilled Gazpacho", "emoji": "🍵", "description": "Blended fresh tomato, cucumber, pepper and garlic soup served cold" },
+      { "name": "Acai Bowl", "emoji": "🫐", "description": "Thick acai base with banana, granola, coconut flakes and fresh fruit" },
+      { "name": "Green Goddess Salad", "emoji": "🥬", "description": "Shredded greens with avocado tahini dressing and toasted seeds" },
+      { "name": "Stuffed Bell Peppers", "emoji": "🫑", "description": "Roasted peppers filled with quinoa, black beans and melted cheese" },
+      { "name": "Soba Edamame Salad", "emoji": "🍜", "description": "Cold soba noodles with edamame, cucumber, sesame and rice vinegar" },
+      { "name": "Beet & Orange Salad", "emoji": "🍊", "description": "Roasted beets with orange segments, arugula and candied walnuts" },
+      { "name": "Caprese Salad", "emoji": "🧀", "description": "Heirloom tomatoes with fresh mozzarella, basil and good olive oil" },
+      { "name": "Zucchini Corn Fritters", "emoji": "🌽", "description": "Crispy fritters with zucchini and corn, served with tzatziki" },
+      { "name": "Rainbow Buddha Bowl", "emoji": "🌈", "description": "Roasted veggies, grains, greens and hummus with tahini drizzle" }
+    ]
+  },
+  "luteal": {
+    "tagline": "Comforting & grounding",
+    "tip": "Complex carbs and magnesium-rich foods help ease PMS and stabilise mood.",
+    "recipes": [
+      { "name": "Chickpea Spinach Curry", "emoji": "🍛", "description": "Creamy chickpea and spinach curry with basmati rice and naan" },
+      { "name": "Chocolate Overnight Oats", "emoji": "🍫", "description": "Overnight oats with cacao, banana, walnuts and a touch of maple" },
+      { "name": "Lentil Shepherd's Pie", "emoji": "🥧", "description": "Hearty lentil and mushroom base topped with fluffy mashed potato" },
+      { "name": "Sweet Potato Enchiladas", "emoji": "🍠", "description": "Roasted sweet potato and black bean enchiladas with verde sauce" },
+      { "name": "Banana Oat Bars", "emoji": "🍌", "description": "Soft baked bars with banana, oats, dark chocolate chips and flax" },
+      { "name": "Chamomile Porridge", "emoji": "🌼", "description": "Creamy oats steeped with chamomile, honey and toasted almonds" },
+      { "name": "Veggie Lasagne", "emoji": "🫕", "description": "Layered pasta with roasted veggies, rich tomato sauce and béchamel" },
+      { "name": "Peanut Butter Noodles", "emoji": "🥜", "description": "Udon noodles with creamy peanut sauce, broccoli and edamame" },
+      { "name": "Roasted Sweet Potato Bowl", "emoji": "🥗", "description": "Sweet potato, kale, chickpeas and tahini-lemon dressing" },
+      { "name": "Mushroom Soup", "emoji": "🍄", "description": "Silky cream of mushroom soup with thyme and crusty sourdough" },
+      { "name": "Warm Lentil Salad", "emoji": "🫘", "description": "Puy lentils with roasted carrots, goat cheese and walnut dressing" },
+      { "name": "Baked Mac & Cheese", "emoji": "🧀", "description": "Creamy homemade mac and cheese with a golden breadcrumb topping" },
+      { "name": "Veggie Fried Rice", "emoji": "🍚", "description": "Egg fried rice with peas, corn, carrot and a splash of soy sauce" },
+      { "name": "Stuffed Portobello Mushrooms", "emoji": "🍄", "description": "Portobellos filled with spinach, ricotta and sundried tomatoes" },
+      { "name": "Dark Chocolate Mousse", "emoji": "🍮", "description": "Light aquafaba chocolate mousse with raspberries and mint" }
+    ]
+  }
+}

@@ -8,27 +8,45 @@ struct CycleHistoryView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                if cycles.isEmpty {
-                    ContentUnavailableView(
-                        "No Cycle Data",
-                        systemImage: "calendar.badge.exclamationmark",
-                        description: Text("Add a period start date to begin tracking.")
-                    )
-                } else {
-                    VStack(alignment: .leading, spacing: 24) {
-                        cycleDatesSection
-                        if cycles.count >= 2 {
-                            cycleLengthSection
-                            phaseBreakdownSection
-                        } else {
-                            Text("Log at least 2 cycles to see charts and trends.")
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
+            ZStack {
+                backgroundPhase.backgroundTint.opacity(0.55)
+                    .ignoresSafeArea()
+
+                ScrollView {
+                    if cycles.isEmpty {
+                        ContentUnavailableView(
+                            "No Cycle Data",
+                            systemImage: "calendar.badge.exclamationmark",
+                            description: Text("Add a period start date to begin tracking.")
+                        )
+                    } else {
+                        VStack(alignment: .leading, spacing: 24) {
+                            HStack(spacing: 12) {
+                                PhaseBlobCharacterView(phase: backgroundPhase, size: 78)
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text("History helper")
+                                        .font(.headline)
+                                    Text("Edit dates and review trends with your cycle blob guide.")
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                                Spacer()
+                            }
+                            .padding(12)
+                            .background(cardBackground)
+                            cycleDatesSection
+                            if cycles.count >= 2 {
+                                cycleLengthSection
+                                phaseBreakdownSection
+                            } else {
+                                Text("Log at least 2 cycles to see charts and trends.")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                            recentLogsSection
                         }
-                        recentLogsSection
+                        .padding()
                     }
-                    .padding()
                 }
             }
             .navigationTitle("Cycle History")
@@ -59,7 +77,7 @@ struct CycleHistoryView: View {
                 .foregroundStyle(.secondary)
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
+        .background(cardBackground)
     }
 
     // MARK: - Cycle Length Trend
@@ -68,10 +86,9 @@ struct CycleHistoryView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Cycle Length Trend")
                 .font(.headline)
-
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
+        .background(cardBackground)
     }
 
     // MARK: - Phase Breakdown
@@ -101,7 +118,6 @@ struct CycleHistoryView: View {
                 .frame(height: 200)
                 .chartLegend(.hidden)
 
-                // Phase detail list
                 ForEach(phases) { range in
                     HStack {
                         Circle()
@@ -118,7 +134,7 @@ struct CycleHistoryView: View {
             }
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
+        .background(cardBackground)
     }
 
     // MARK: - Recent Logs
@@ -150,14 +166,15 @@ struct CycleHistoryView: View {
             }
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
+        .background(cardBackground)
     }
 
-    // MARK: - Helpers
+    private var cardBackground: some View {
+        RoundedRectangle(cornerRadius: 16)
+            .fill(.white.opacity(0.58))
+    }
 
-    private var averageCycleLength: Double? {
-        guard !cycles.isEmpty else { return nil }
-        let total = cycles.reduce(0) { $0 + $1.cycleLength }
-        return Double(total) / Double(cycles.count)
+    private var backgroundPhase: CyclePhase {
+        CycleCalculator.phase(for: Date(), cycles: cycles) ?? .follicular
     }
 }
