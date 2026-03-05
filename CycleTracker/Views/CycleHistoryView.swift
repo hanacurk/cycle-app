@@ -9,23 +9,57 @@ struct CycleHistoryView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                if cycles.count >= 2 {
+                if cycles.isEmpty {
+                    ContentUnavailableView(
+                        "No Cycle Data",
+                        systemImage: "calendar.badge.exclamationmark",
+                        description: Text("Add a period start date to begin tracking.")
+                    )
+                } else {
                     VStack(alignment: .leading, spacing: 24) {
-                        cycleLengthSection
-                        phaseBreakdownSection
+                        cycleDatesSection
+                        if cycles.count >= 2 {
+                            cycleLengthSection
+                            phaseBreakdownSection
+                        } else {
+                            Text("Log at least 2 cycles to see charts and trends.")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
                         recentLogsSection
                     }
                     .padding()
-                } else {
-                    ContentUnavailableView(
-                        "Not Enough Data",
-                        systemImage: "chart.bar",
-                        description: Text("Log at least 2 cycles to see charts and trends.")
-                    )
                 }
             }
             .navigationTitle("Cycle History")
         }
+    }
+
+    // MARK: - Cycle Dates
+
+    private var cycleDatesSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Cycle Start Dates")
+                .font(.headline)
+
+            ForEach(Array(cycles.enumerated()), id: \.element.id) { index, cycle in
+                DatePicker(
+                    "Cycle \(index + 1)",
+                    selection: Binding(
+                        get: { cycle.startDate },
+                        set: { cycle.startDate = Calendar.current.startOfDay(for: $0) }
+                    ),
+                    in: ...Date(),
+                    displayedComponents: .date
+                )
+            }
+
+            Text("Edit dates here anytime to correct your tracking history.")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
     }
 
     // MARK: - Cycle Length Trend

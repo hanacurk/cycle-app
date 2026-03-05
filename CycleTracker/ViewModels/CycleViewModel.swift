@@ -50,14 +50,66 @@ class CycleViewModel {
 
     // MARK: - Actions
 
-    func startNewCycle(context: ModelContext, cycleLength: Int = 28, periodLength: Int = 5) {
-        let record = CycleRecord(startDate: Date(), cycleLength: cycleLength, periodLength: periodLength)
+    func startNewCycle(
+        context: ModelContext,
+        existingCycles: [CycleRecord],
+        startDate: Date,
+        cycleLength: Int = 28,
+        periodLength: Int = 5
+    ) {
+        let normalizedCycleLength = max(cycleLength, 1)
+        let normalizedPeriodLength = min(max(periodLength, 1), normalizedCycleLength)
+        let calendar = Calendar.current
+        let normalizedStartDate = calendar.startOfDay(for: startDate)
+
+        guard !existingCycles.contains(where: { calendar.isDate($0.startDate, inSameDayAs: normalizedStartDate) }) else {
+            return
+        }
+
+        let record = CycleRecord(
+            startDate: normalizedStartDate,
+            cycleLength: normalizedCycleLength,
+            periodLength: normalizedPeriodLength
+        )
         context.insert(record)
+
+        if existingCycles.isEmpty {
+            generateHistoricalCycles(
+                context: context,
+                from: normalizedStartDate,
+                cycleLength: normalizedCycleLength,
+                periodLength: normalizedPeriodLength
+            )
+        }
     }
 
     func endCurrentPeriod(context: ModelContext, cycles: [CycleRecord]) {
         guard let latest = cycles.sorted(by: { $0.startDate > $1.startDate }).first,
               latest.endDate == nil else { return }
         latest.endDate = Date()
+    }
+
+    private func generateHistoricalCycles(
+        context: ModelContext,
+        from firstStartDate: Date,
+        cycleLength: Int,
+        periodLength: Int
+    ) {
+        let calendar = Calendar.current
+        guard let oneYearBack = calendar.date(byAdding: .year, value: -1, to: firstStartDate) else { return }
+
+        var cursor = firstStartDate
+
+        while let previousStart = calendar.date(byAdding: .day, value: -cycleLength, to: cursor),
+              previousStart >= oneYearBack {
+            context.insert(
+                CycleRecord(
+                    startDate: previousStart,
+                    cycleLength: cycleLength,
+                    periodLength: periodLength
+                )
+            )
+            cursor = previousStart
+        }
     }
 }
