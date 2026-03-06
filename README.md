@@ -1,20 +1,18 @@
 # CycleTracker
 
-A period tracking app for iOS built with SwiftUI. Designed to feel like a supportive companion rather than a medical form — soft UI, friendly characters, and gentle phase-aware suggestions.
+A period tracking app for iOS built with SwiftUI.
 
 ## Features
 
 **Today tab**
-- Daily quote seeded per day, rotating without repeating
+- Daily quotes per day, rotating without repeating
 - One do and one don't for the day, phase-specific
 - Explanation of what your body is doing hormonally
 - Phase-specific food recommendations and seed cycling suggestions
-- 15 vegetarian recipes per phase loaded from local JSON
-- Blob character with phase-matching expression and chef hat on the recipes section
+- 15 recipes per phase loaded from local JSON
 
 **Calendar tab**
 - Full month calendar with phase-colored days
-- Connected pill indicator for consecutive period days
 - Tap any day to see its phase
 - Add and manage period start dates
 
