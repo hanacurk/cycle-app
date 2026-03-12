@@ -94,8 +94,8 @@ struct CycleCalculator {
         let start = calendar.startOfDay(for: latest.startDate)
         let daysSinceStart = calendar.dateComponents([.day], from: start, to: today).day ?? 0
 
-        let currentCycleDay = daysSinceStart % latest.cycleLength
-        return latest.cycleLength - currentCycleDay
+        let offsetInCycle = daysSinceStart % latest.cycleLength
+        return (latest.cycleLength - offsetInCycle) % latest.cycleLength
     }
 
     static func currentDayInCycle(from cycles: [CycleRecord]) -> Int? {
